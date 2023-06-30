@@ -4,6 +4,7 @@ const cors = require("cors");
 require("dotenv").config();
 const { errorHandler } = require("./helpers/apiHelpers");
 const imagesRouter = require("./routes/images");
+const groupRoutes = require("./routes/group");
 
 const app = express();
 
@@ -15,6 +16,7 @@ app.use(express.json());
 
 app.use(express.static("public"));
 app.use("/rock", imagesRouter);
+app.use("/rock", groupRoutes);
 app.use((req, res) => {
   res.status(404).json({ message: "Not found" });
 });
