@@ -1,27 +1,34 @@
 const axios = require("axios");
+const cloudinary = require("cloudinary");
 
 const getImagesControllerEighteen = async (req, res) => {
-  const response = await axios.get(
-    `https://${process.env.CLOUDI_KEY}:${process.env.CLOUDI_SECRET}@api.cloudinary.com/v1_1/dvks9blhu/resources/image/upload?prefix=rock-na-seli/2018`
-  );
+  cloudinary.config({
+    secure: true,
+  });
 
-  res.json({ ...response.data });
+  cloudinary.v2.api
+    .resources({ max_results: 50, type: "upload", prefix: "rock-na-seli2018" })
+    .then((result) => res.json({ ...result.resources }));
 };
 
 const getImagesControllerNineteen = async (req, res) => {
-  const response = await axios.get(
-    `https://${process.env.CLOUDI_KEY}:${process.env.CLOUDI_SECRET}@api.cloudinary.com/v1_1/dvks9blhu/resources/image/upload?prefix=rock-na-seli/2019`
-  );
+  cloudinary.config({
+    secure: true,
+  });
 
-  res.json({ ...response.data });
+  cloudinary.v2.api
+    .resources({ max_results: 50, type: "upload", prefix: "rock-na-seli2019" })
+    .then((result) => res.json({ ...result.resources }));
 };
 
 const getImagesControllerTwentyOne = async (req, res) => {
-  const response = await axios.get(
-    `https://${process.env.CLOUDI_KEY}:${process.env.CLOUDI_SECRET}@api.cloudinary.com/v1_1/dvks9blhu/resources/image/upload?prefix=rock-na-seli/2021`
-  );
+  cloudinary.config({
+    secure: true,
+  });
 
-  res.json({ ...response.data });
+  cloudinary.v2.api
+    .resources({ max_results: 50, type: "upload", prefix: "rock-na-seli2021" })
+    .then((result) => res.json({ ...result.resources }));
 };
 
 module.exports = {
