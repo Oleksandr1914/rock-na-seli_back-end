@@ -5,7 +5,7 @@ const emailHtml = (
   phone,
   address,
   styleGroup,
-  numberOfBandMembers,
+  informationGroup,
   listOfInstrumentalBend,
   linksSocialNetworkPage,
   linksToBandVideo
@@ -72,7 +72,7 @@ const emailHtml = (
 		</tr>
 		<tr>
 			<td>Кількість учасників гурту</td>
-			<td>${numberOfBandMembers}</td>
+			<td>${informationGroup}</td>
 		</tr>
 		<tr>
 			<td>Коротка інформація про гурт</td>
