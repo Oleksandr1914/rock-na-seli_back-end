@@ -32,8 +32,8 @@ const groupSchema = new mongoose.Schema(
       default: null,
       require: true,
     },
-    numberOfBandMembers: {
-      type: Number,
+    informationGroup: {
+      type: String,
       default: null,
       require: true,
     },
