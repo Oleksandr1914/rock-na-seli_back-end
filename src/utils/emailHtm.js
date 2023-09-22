@@ -72,11 +72,11 @@ const emailHtml = (
 		</tr>
 		<tr>
 			<td>Кількість учасників гурту</td>
-			<td>${informationGroup}</td>
+			<td>${listOfInstrumentalBend}</td>
 		</tr>
 		<tr>
 			<td>Коротка інформація про гурт</td>
-			<td>${listOfInstrumentalBend}</td>
+			<td>${informationGroup}</td>
 		</tr>
 		<tr>
 			<td>Посилання на сторінки соціальних мереж</td>
